@@ -2,63 +2,114 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <div className="min-h-screen flex flex-col items-center p-4">
+      <main className="flex flex-col items-center gap-16 md:gap-21 lg:gap-24 w-full max-w-[calc(100vw-40px)] md:max-w-[774px] lg:max-w-[1248px]">
+        {/*Hero section*/}
+        <section className="flex flex-col md:flex-row gap-5 lg:gap-6 items-center relative w-full">
+          <div className="flex flex-col gap-4 items-start flex-1 relative z-1">
+            <h1 className=" capitalize font-heading font-black text-[40px] md:text-5xl lg:text-[64px]">Exceptional printing services in the vaal triangle.</h1>
+            <p className="font-mono text-base lg:text-lg">Experience top-quality printing services with exceptional customer service in the Vanderbijlpark and Vaal Triangle area.</p>
+          </div>
+          <div className="flex-1 shrink-0 grow aspect-3/4 relative z-1 max-h-[517px] w-full">
+            <Image src="/images/home/hero.png" alt="Two white mugs stacked on each other. The mugs has the Triangle Print Spot logo on them and features a stacked series of triangles in a gradient ranging from red to black." fill className="object-contain"/>
+          </div>
+          <div className="aspect-square bg-red w-[600] lg:w-[720] blur-[250px] opacity-80 rounded-full absolute -right-50 lg:right-0"></div>
+        </section>
+        {/*Products section*/}
+        <section className="z-3 w-full">
+          <div className="flex flex-col md:flex-row gap-5 lg:gap-6 items-center">
+            <div className="flex flex-col gap-4 flex-1">
+              <p className="text-xs md:text-sm lg:text-base uppercase font-semibold text-grey">Our Services</p>
+              <h2 className="font-heading font-bold text-xl md:text-3xl lg:text-4xl capitalize">Discover our printing solutions</h2>
+              <p className="font-mono text-xs md:text-sm lg:text-base">Explore our comprehensive range of printing services tailored to meet your diverse needs, from custom merchandise to professional document management. Let us bring your ideas to life with precision and excellence.</p>
+            </div>
+            <div className="aspect-4/3 overflow-hidden flex-1 relative w-full">
+              <Image src="/images/home/services.png" alt="A collection of Triangle Print Spot designed business stationery and cards arranged on a blank background." fill/>
+            </div>
+          </div>
+          <div className="flex flex-col md:grid grid-cols-6 grid-rows-2 gap-4 md:gap-5 lg:gap-6 md:items-start w-full">
+            <div className="flex flex-col rounded-2xl shadow-lg shadow-black/20 col-span-3 p-3 gap-3 md:p-3.5 md:gap-3.5 lg:p-4 lg:gap-4">
+              <div className="aspect-square relative overflow-hidden w-full">
+                <Image src="" alt="" fill className="object-contain"/>
+              </div>
+              <div className="flex flex-col items-start gap-3 md:gap-3.5 lg:gap-4">
+                <h3 className="font-heading font-bold text-xl md:text-2xl lg:text-3xl">Product Name</h3>
+                <p className="font-mono font-normal text-xs md:text-sm lg:text-base">Product Description</p>
+              </div>
+            </div>
+            <div className="flex flex-col rounded-2xl shadow-lg shadow-black/20 col-span-3 p-3 gap-3 md:p-3.5 md:gap-3.5 lg:p-4 lg:gap-4">
+              <div className="aspect-square relative overflow-hidden w-full">
+                <Image src="" alt="" fill className="object-contain"/>
+              </div>
+              <div className="flex flex-col items-start gap-3 md:gap-3.5 lg:gap-4">
+                <h3 className="font-heading font-bold text-xl md:text-2xl lg:text-3xl">Product Name</h3>
+                <p className="font-mono font-normal text-xs md:text-sm lg:text-base">Product Description</p>
+              </div>
+            </div>
+            <div className="flex flex-col rounded-2xl shadow-lg shadow-black/20 col-span-2 p-3 gap-3 md:p-3.5 md:gap-3.5 lg:p-4 lg:gap-4">
+              <div className="aspect-square relative overflow-hidden w-full">
+                <Image src="" alt="" fill className="object-contain"/>
+              </div>
+              <div className="flex flex-col items-start gap-3 md:gap-3.5 lg:gap-4">
+                <h3 className="font-heading font-bold text-xl md:text-2xl lg:text-3xl">Product Name</h3>
+                <p className="font-mono font-normal text-xs md:text-sm lg:text-base">Product Description</p>
+              </div>
+            </div>
+            <div className="flex flex-col rounded-2xl shadow-lg shadow-black/20 col-span-2 p-3 gap-3 md:p-3.5 md:gap-3.5 lg:p-4 lg:gap-4">
+              <div className="aspect-square relative overflow-hidden w-full">
+                <Image src="" alt="" fill className="object-contain"/>
+              </div>
+              <div className="flex flex-col items-start gap-3 md:gap-3.5 lg:gap-4">
+                <h3 className="font-heading font-bold text-xl md:text-2xl lg:text-3xl">Product Name</h3>
+                <p className="font-mono font-normal text-xs md:text-sm lg:text-base">Product Description</p>
+              </div>
+            </div>
+            <div className="flex flex-col rounded-2xl shadow-lg shadow-black/20 col-span-2 p-3 gap-3 md:p-3.5 md:gap-3.5 lg:p-4 lg:gap-4">
+              <div className="aspect-square relative overflow-hidden w-full">
+                <Image src="" alt="" fill className="object-contain"/>
+              </div>
+              <div className="flex flex-col items-start gap-3 md:gap-3.5 lg:gap-4">
+                <h3 className="font-heading font-bold text-xl md:text-2xl lg:text-3xl">Product Name</h3>
+                <p className="font-mono font-normal text-xs md:text-sm lg:text-base">Product Description</p>
+              </div>
+            </div>
+          </div>
+        </section >
+        {/*About section*/}
+        <section className="flex flex-col lg:flex-row gap-5 lg:gap-6 items-center relative">
+          <div className="flex flex-col flex-1 gap-4 md:gap-5 lg:gap-6">
+            <div className="flex flex-col gap-3 md:gap-3.5 lg:gap-4 flex-1">
+              <p className="uppercase text-grey font-mono font-normal text-xs md:text-sm lg:text-base -mb-2">About us</p>
+              <h2 className="font-heading font-bold text-xl md:text-3xl lg:text-4xl">The Story Behind Our Ongoing Success</h2>
+              <p className="font-mono font-normal text-xs md:text-sm lg:text-base">Explore our journey, values, and commitment to excellence as a family-owned printing shop since 1998. Learn more about who we are and what drives us to deliver exceptional printing services to our valued customers.</p>
+            </div>
+            <div className="grid grid-cols-3 gap-3 md:gap-3.5 lg:gap-4">
+              <div className="flex flex-col gap-1 md:gap-1.5 lg:gap-2">
+                <h3 className="font-heading font-bold text-xl md:text-2xl lg:text-3xl">Our Mission</h3>
+                <p className="font-mono font-normal text-xs md:text-sm lg:text-base">Discover how our family-owned business brings innovation, precision, and excellence to every printing project we undertake.</p>
+              </div>
+              <div className="flex flex-col gap-1 md:gap-1.5 lg:gap-2">
+                <h3 className="font-heading font-bold text-xl md:text-2xl lg:text-3xl">Our Story</h3>
+                <p className="font-mono font-normal text-xs md:text-sm lg:text-base">Learn about our journey from humble beginnings in 1998 to becoming a trusted name in the printing industry, driven by a legacy of quality and dedication.</p>
+              </div>
+              <div className="flex flex-col gap-1 md:gap-1.5 lg:gap-2">
+                <h3 className="font-heading font-bold text-xl md:text-2xl lg:text-3xl">Our Values</h3>
+                <p className="font-mono font-normal text-xs md:text-sm lg:text-base">Explore the core principles that guide everything we do—quality, family values, integrity, and reliability—ensuring we deliver the best with every project.</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex-1 relative aspect-4/3 rounded-xl w-full overflow-hidden">
+            <Image src="" className="" fill alt=""/>
+          </div>
+        </section>
+        {/*Reviews section*/}
+        <section className="flex flex-col w-full items-center">
+          <div className="flex flex-col gap-3 md:gap-3.5 lg:gap-4 items-center">
+            <h2 className="font-heading font-bold text-xl md:text-3xl lg:text-4xl">Customer Reviews</h2>
+            <p className="font-mono font-normal text-xs md:text-sm lg:text-base">We're always eager to assist you with a printing project. Reach out and let’s bring your creative vision to life.</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5 lg:gap-6"></div>
+        </section>
       </main>
     </div>
   );

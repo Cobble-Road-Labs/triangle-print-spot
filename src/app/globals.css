@@ -17,6 +17,11 @@
   --font-mono: var(--font-lato);
 }
 
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background: var(--color-white);
   color: var(--color-black);

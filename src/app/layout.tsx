@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Lato } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair-display",
@@ -31,11 +33,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="w-full">
       <body
-        className={`${playfair.variable} ${lato.variable} antialiased`}
+        className={`${playfair.variable} ${lato.variable} antialiased w-full`}
       >
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

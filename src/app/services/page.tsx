@@ -215,7 +215,7 @@ export default function Services() {
                       <p className="font-mono font-normal text-xs md:text-sm lg:text-base">
                           Get exactly what you need with our print-on-demand service. Whether your designs are on a flash drive, CD, or email, just send us the files, and we’ll print them quickly and with top quality.
                       </p>
-                      <Button href="/contact" variant="primary">Visit us in store</Button>
+                      <Button href="https://maps.app.goo.gl/jLGSKqUcRo2mkRXi8" variant="primary">Visit us in store</Button>
                   </div>
                   <div className="flex-1 relative aspect-square rounded-2xl overflow-hidden w-full">
                       <Image src="/images/services/print-on-demand.png" alt="A small printer with a paper loaded in the top. A soft red light is shone on the printer giving it a light red hue." fill className="object-contain"/>

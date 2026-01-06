@@ -1,6 +1,10 @@
 import Image from "next/image";
 import Button from "@/components/Button";
 import ArrowLink from "@/components/ArrowLink";
+import ReviewsList from "@/components/ReviewsList";
+import GoogleRatingBadge from "@/components/GoogleRatingBadge";
+import ProductCarousel from "@/components/ProductCarousel";
+import { services } from "@/data/services";
 
 export default function Home() {
   return (
@@ -15,6 +19,7 @@ export default function Home() {
               <Button href="/contact" variant="primary">Request Quote</Button>
               <Button href="/services" variant="secondary">Explore Services</Button>
             </div>
+            <GoogleRatingBadge />
           </div>
           <div className="flex-1 shrink-0 grow aspect-3/4 relative z-1 max-h-[517px] w-full">
             <Image src="/images/home/hero.png" alt="Two white mugs stacked on each other. The mugs has the Triangle Print Spot logo on them and features a stacked series of triangles in a gradient ranging from red to black." fill className="object-contain"/>
@@ -37,58 +42,7 @@ export default function Home() {
               <Image src="/images/home/services.png" alt="A collection of Triangle Print Spot designed business stationery and cards arranged on a blank background." fill/>
             </div>
           </div>
-          <div className="flex flex-col md:grid grid-cols-6 grid-rows-2 gap-4 md:gap-5 lg:gap-6 md:items-start w-full">
-            <div className="flex flex-col rounded-2xl shadow-lg shadow-black/20 col-span-3 p-3 gap-3 md:p-3.5 md:gap-3.5 lg:p-4 lg:gap-4">
-              <div className="aspect-square relative overflow-hidden w-full">
-                <Image src="/images/home/Dropper_Bottle_Mockup_3 - square - no - bg.png" alt="A dripper bottle featuring a black dripper cap and a Triangle Print Spot sticker on its side." fill className="object-contain"/>
-              </div>
-              <div className="flex flex-col items-start gap-3 md:gap-3.5 lg:gap-4">
-                <h3 className="font-heading font-bold text-xl md:text-2xl lg:text-3xl capitalize">Wide-format printing</h3>
-                <p className="font-mono font-normal text-xs md:text-sm lg:text-base">Perfect for large-scale prints like bottle stickers, banners, signs, and posters.</p>
-                <ArrowLink href="">Learn more</ArrowLink>
-              </div>
-            </div>
-            <div className="flex flex-col rounded-2xl shadow-lg shadow-black/20 col-span-3 p-3 gap-3 md:p-3.5 md:gap-3.5 lg:p-4 lg:gap-4">
-              <div className="aspect-square relative overflow-hidden w-full">
-                <Image src="" alt="" fill className="object-contain"/>
-              </div>
-              <div className="flex flex-col items-start gap-3 md:gap-3.5 lg:gap-4">
-                <h3 className="font-heading font-bold text-xl md:text-2xl lg:text-3xl capitalize">Business-tailored Printing</h3>
-                <p className="font-mono font-normal text-xs md:text-sm lg:text-base">Professional-quality prints for marketing collateral, stationery, and promotional materials.</p>
-                <ArrowLink href="">Learn more</ArrowLink>
-              </div>
-            </div>
-            <div className="flex flex-col rounded-2xl shadow-lg shadow-black/20 col-span-2 p-3 gap-3 md:p-3.5 md:gap-3.5 lg:p-4 lg:gap-4">
-              <div className="aspect-square relative overflow-hidden w-full">
-                <Image src="" alt="" fill className="object-contain"/>
-              </div>
-              <div className="flex flex-col items-start gap-3 md:gap-3.5 lg:gap-4">
-                <h3 className="font-heading font-bold text-xl md:text-2xl lg:text-3xl">Product Name</h3>
-                <p className="font-mono font-normal text-xs md:text-sm lg:text-base">Product Description</p>
-                <ArrowLink href="">Learn more</ArrowLink>
-              </div>
-            </div>
-            <div className="flex flex-col rounded-2xl shadow-lg shadow-black/20 col-span-2 p-3 gap-3 md:p-3.5 md:gap-3.5 lg:p-4 lg:gap-4">
-              <div className="aspect-square relative overflow-hidden w-full">
-                <Image src="" alt="" fill className="object-contain"/>
-              </div>
-              <div className="flex flex-col items-start gap-3 md:gap-3.5 lg:gap-4">
-                <h3 className="font-heading font-bold text-xl md:text-2xl lg:text-3xl">Product Name</h3>
-                <p className="font-mono font-normal text-xs md:text-sm lg:text-base">Product Description</p>
-                <ArrowLink href="">Learn more</ArrowLink>
-              </div>
-            </div>
-            <div className="flex flex-col rounded-2xl shadow-lg shadow-black/20 col-span-2 p-3 gap-3 md:p-3.5 md:gap-3.5 lg:p-4 lg:gap-4">
-              <div className="aspect-square relative overflow-hidden w-full">
-                <Image src="" alt="" fill className="object-contain"/>
-              </div>
-              <div className="flex flex-col items-start gap-3 md:gap-3.5 lg:gap-4">
-                <h3 className="font-heading font-bold text-xl md:text-2xl lg:text-3xl">Product Name</h3>
-                <p className="font-mono font-normal text-xs md:text-sm lg:text-base">Product Description</p>
-                <ArrowLink href="">Learn more</ArrowLink>
-              </div>
-            </div>
-          </div>
+          <ProductCarousel products={services} />
         </section >
         {/*About section*/}
         <section className="flex flex-col lg:flex-row gap-5 lg:gap-6 items-center relative">
@@ -117,17 +71,17 @@ export default function Home() {
             </div>
           </div>
           <div className="flex-1 relative aspect-4/3 rounded-xl w-full overflow-hidden">
-            <Image src="" className="" fill alt=""/>
+            <Image src="/images/home/about-img.png" className="object-cover" fill alt="A photo of the owners of Triangle Print Spot in front of their new store location."/>
           </div>
         </section>
         {/*Reviews section*/}
-        <section className="flex flex-col w-full items-start">
+        <section className="flex flex-col w-full items-start gap-5 lg:gap-6">
           <div className="flex flex-col gap-3 md:gap-3.5 lg:gap-4 items-start">
             <h2 className="font-heading font-bold text-xl md:text-3xl lg:text-4xl">Customer Reviews</h2>
-            <p className="font-mono font-normal text-xs md:text-sm lg:text-base">We're always eager to assist you with a printing project. Reach out and let’s bring your creative vision to life.</p>
+            <p className="font-mono font-normal text-xs md:text-sm lg:text-base">See what our customers have to say about working with Triangle Print Spot.</p>
             <Button href="/contact" variant="primary">Request Quote</Button>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5 lg:gap-6"></div>
+          <ReviewsList limit={3} />
         </section>
       </main>
     </div>

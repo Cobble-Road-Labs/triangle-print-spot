@@ -67,7 +67,7 @@ export default function About() {
                 {/*Our Story Section*/}
                 <section className="flex flex-col md:flex-row gap-5 lg:gap-6 items-center relative" id="our-story">
                     <div className="flex-1 relative aspect-4/3 rounded-2xl overflow-hidden w-full">
-                        <Image src="/images/about/Eb375dfv08OdShcofR8ZgH8QWY.webp" alt="The Triangle Print Spot team, dressed in red shirts and blue jeans, stands confidently at their store counter." fill className="object-cover object-left"/>
+                        <Image src="/images/about/our-story-img.png" alt="The Triangle Print Spot team, dressed in red shirts and blue jeans, stands confidently at their store counter." fill className="object-cover object-left"/>
                     </div>
                     <div className="flex flex-col gap-3 md:gap-3.5 lg:gap-4 flex-1">
                         <p className="uppercase text-grey font-mono font-normal text-xs md:text-sm lg:text-base -mb-2">Our story</p>

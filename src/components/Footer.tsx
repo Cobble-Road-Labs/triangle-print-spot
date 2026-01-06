@@ -19,7 +19,7 @@ export default function Footer() {
                     <Link href="/" className="relative h-12 aspect-3/1">
                         <Image src='/images/logo.png' alt="Triangle Print Spot Logo" fill className="object-contain"/>
                     </Link>
-                    <div className="flex flex-col md:flex-row items-center space-x-6">
+                    <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 ">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.href}

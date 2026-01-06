@@ -2,6 +2,8 @@ import Image from 'next/image';
 import { Mail, Phone } from 'lucide-react';
 import Link from 'next/link';
 import Button from '@/components/Button';
+import ContactForm from '@/components/ContactForm';
+import ReviewsList from '@/components/ReviewsList';
 
 export default function Contact() {
     return (
@@ -21,10 +23,10 @@ export default function Contact() {
                 {/*Contact Info Section*/}
                 <section className="flex flex-col gap-5 lg:gap-6 items-start relative w-full" id="contact-info">
                     <h2 className="font-heading font-bold text-xl md:text-3xl lg:text-4xl capitalize">We'd love to answer your questions!</h2>
-                    <div className="flex flex-col md:flex-row gap-4 md:gap-5 lg:gap-6 flex-1 w-full">
+                    <div className="flex flex-col md:flex-row gap-4 md:gap-5 lg:gap-6 flex-1 w-full items-start">
                         <div className='flex-1 flex flex-col p-6 gap-4 bg-white rounded-2xl shadow-lg shadow-black/20 w-full'>
                             <h3 className="font-heading font-bold text-xl md:text-2xl lg:text-3xl text-left">Fill out the form and we'll get back to you.</h3>
-                            {/* Contact Form Component Comes here*/}
+                            <ContactForm />
                         </div>
                         <div className='flex-1 flex flex-col p-6 gap-4 bg-white rounded-2xl shadow-lg shadow-black/20 w-full'>  
                             <h3 className="font-heading font-bold text-xl md:text-2xl lg:text-3xl text-left">Alternatively, you can reach us here.</h3>
@@ -61,18 +63,23 @@ export default function Contact() {
                     </div>
                 </section>
                 {/*Reviews section*/}
-                <section className="flex flex-col w-full items-start">
+                <section className="flex flex-col w-full items-start gap-5 lg:gap-6">
                   <div className="flex flex-col gap-3 md:gap-3.5 lg:gap-4 items-start">
                     <h2 className="font-heading font-bold text-xl md:text-3xl lg:text-4xl">Customer Reviews</h2>
-                    <p className="font-mono font-normal text-xs md:text-sm lg:text-base">We're always eager to assist you with a printing project. Reach out and let’s bring your creative vision to life.</p>
-                    <Button href="/contact" variant="primary">Request Quote</Button>
+                    <p className="font-mono font-normal text-xs md:text-sm lg:text-base">See what our customers have to say about working with Triangle Print Spot.</p>
                   </div>
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5 lg:gap-6"></div>
+                  <ReviewsList />
                 </section>
                 {/*Location Section*/}
                 <section className='flex flex-col md:flex-row gap-5 lg:gap-6 items-center relative w-full' id='location'>
-                    <div className="flex-1 relative aspect-4/3 rounded-2xl overflow-hidden w-full">
-                        {/*Embedded Map*/}
+                    <div className="flex-1 relative aspect-4/3 rounded-2xl overflow-hidden w-full shadow-lg shadow-black/20">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3564.3724300326785!2d27.833841676205317!3d-26.700546584373875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e94598caf82c357%3A0x24e6e03add818f44!2sTriangle%20Print%20Spot!5e0!3m2!1sen!2sza!4v1767623339420!5m2!1sen!2sza" 
+                            className="w-full h-full"
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
                     <div className="flex flex-col gap-3 md:gap-3.5 lg:gap-4 flex-1 w-full">
                         <h2 className="font-heading font-bold text-xl md:text-3xl lg:text-4xl capitalize">Come visit us in store!</h2>
